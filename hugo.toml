@@ -1,0 +1,200 @@
+baseURL = 'https://mrbell.dev/'
+languageCode = 'en-us'
+title = 'Michael Bell'
+theme = "minimal-black"
+
+# Enable search index generation and web app manifest
+[outputs]
+  home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+
+[outputFormats.WebAppManifest]
+  mediaType = "application/manifest+json"
+  rel = "manifest"
+  baseName = "manifest"
+  isPlainText = true
+  notAlternative = true
+
+[params]
+  brand = "Michael Bell"
+  description = "Senior DevOps Engineer — CI/CD, infrastructure automation, and cloud architecture."
+
+  # favicon = "icons/favicon.svg"   # TODO: add a favicon to static/
+  # logo    = "images/logo.png"     # TODO: optional logo
+
+  projectsIntro = "A few things I've built."
+  blogIntro = ""
+
+  [params.manifest]
+    themeColor = "#a855f7"
+    backgroundColor = "#000000"
+    categories = ["portfolio", "developer", "devops"]
+
+  [params.theme]
+    defaultTheme = "dark"
+
+  [params.home]
+    sections = ["hero", "now", "tech-marquee", "projects", "posts"]
+    showNowSection = true
+    showFeaturedProjects = true
+    showLatestPosts = false
+    featuredProjectsLimit = 3
+    latestPostsLimit = 3
+    projectsTitle = "Selected Work"
+    blogTitle = "Latest Writing"
+    techMarqueeLabel = "Experienced In"
+
+    [[params.home.tech]]
+      label = "AWS"
+      icon = "devicon-amazonwebservices-plain-wordmark"
+    [[params.home.tech]]
+      label = "Terraform"
+      icon = "devicon-terraform-plain"
+    [[params.home.tech]]
+      label = "Ansible"
+      icon = "devicon-ansible-plain"
+    [[params.home.tech]]
+      label = "Docker"
+      icon = "devicon-docker-plain"
+    [[params.home.tech]]
+      label = "Kubernetes"
+      icon = "devicon-kubernetes-plain"
+    [[params.home.tech]]
+      label = "Jenkins"
+      icon = "devicon-jenkins-plain"
+
+    [[params.home.techReverse]]
+      label = "GitHub Actions"
+      icon = "devicon-github-original"
+    [[params.home.techReverse]]
+      label = "Python"
+      icon = "devicon-python-plain"
+    [[params.home.techReverse]]
+      label = "Bash"
+      icon = "devicon-bash-plain"
+    [[params.home.techReverse]]
+      label = "Linux"
+      icon = "devicon-linux-plain"
+    [[params.home.techReverse]]
+      label = "Grafana"
+      icon = "devicon-grafana-original"
+    [[params.home.techReverse]]
+      label = "PostgreSQL"
+      icon = "devicon-postgresql-plain"
+
+  # Hero Section — identity is real; summary/now are placeholders to refine from LinkedIn
+  [params.hero]
+    badge = "Senior DevOps Engineer"
+    title = "Hi, I'm Michael Bell."
+    role = "I architect CI/CD pipelines and automate infrastructure at scale."
+    summary = "PLACEHOLDER — 10+ years building CI/CD and infrastructure automation for Fortune 500 companies. Full summary to be pulled from LinkedIn."
+    location = "Charlotte, North Carolina"
+    focus = "Currently focused on cloud automation and local AI infrastructure."
+    available = false
+    availableLabel = "Open to opportunities"
+
+    nowLabel = "Quick Facts"
+    nowIntro = "Right now I'm mainly:"
+    now = [
+      "Architecting CI/CD and IaC pipelines",
+      "Running a local Ollama/llama.cpp AI stack",
+      "Tinkering with ham radio and 3D printing",
+    ]
+
+    [params.hero.primary]
+      label = "View Projects"
+      href = "/projects/"
+    [params.hero.secondary]
+      label = "About Me"
+      href = "/about/"
+
+  [params.icons]
+    useFontAwesome = true
+    useDevicon = true
+
+  [[params.social]]
+    label = "GitHub"
+    url = "https://github.com/mrbell-dev"
+    icon = "fa-brands fa-github"
+  [[params.social]]
+    label = "LinkedIn"
+    url = "https://linkedin.com/in/mrbell90"
+    icon = "fa-brands fa-linkedin-in"
+  [[params.social]]
+    label = "Email"
+    url = "mailto:michael.bell1990@gmail.com"
+    icon = "fa-regular fa-envelope"
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    url = "/"
+    weight = 1
+    identifier = "home"
+    [menu.main.params]
+      icon = "fa-solid fa-house"
+  [[menu.main]]
+    name = "About"
+    pageRef = "about"
+    url = "/about/"
+    weight = 2
+    identifier = "about"
+    [menu.main.params]
+      icon = "fa-regular fa-user"
+  [[menu.main]]
+    name = "Projects"
+    pageRef = "projects"
+    url = "/projects/"
+    weight = 3
+    identifier = "projects"
+    [menu.main.params]
+      icon = "fa-regular fa-folder-open"
+  [[menu.main]]
+    name = "Blog"
+    pageRef = "blog"
+    url = "/blog/"
+    weight = 4
+    identifier = "blog"
+    [menu.main.params]
+      icon = "fa-regular fa-note-sticky"
+
+# Markup Configuration
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser]
+    [markup.goldmark.parser.attribute]
+      block = true
+  [markup.goldmark.extensions]
+    typographer = true
+    linkify = true
+    table = true
+    strikethrough = true
+    taskList = true
+    definitionList = true
+    footnote = true
+    [markup.goldmark.extensions.extras.delete]
+      enable = true
+    [markup.goldmark.extensions.extras.insert]
+      enable = true
+    [markup.goldmark.extensions.extras.mark]
+      enable = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+    style = "monokai"
+    tabWidth = 2
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
