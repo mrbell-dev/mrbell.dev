@@ -1,4 +1,4 @@
-baseURL = 'https://mrbell.dev/'
+baseURL = 'https://resume.mrbell.dev/'
 languageCode = 'en-us'
 title = 'Michael Bell'
 theme = "minimal-black"
@@ -36,7 +36,7 @@ theme = "minimal-black"
     sections = ["hero", "now", "tech-marquee", "projects", "posts"]
     showNowSection = true
     showFeaturedProjects = true
-    showLatestPosts = false
+    showLatestPosts = true
     featuredProjectsLimit = 3
     latestPostsLimit = 3
     projectsTitle = "Selected Work"
@@ -81,14 +81,14 @@ theme = "minimal-black"
       label = "PostgreSQL"
       icon = "devicon-postgresql-plain"
 
-  # Hero Section — identity is real; summary/now are placeholders to refine from LinkedIn
+  # Hero Section
   [params.hero]
-    badge = "Senior DevOps Engineer"
+    badge = "Senior DevOps Engineer · Cloud Architect"
     title = "Hi, I'm Michael Bell."
-    role = "I architect CI/CD pipelines and automate infrastructure at scale."
-    summary = "PLACEHOLDER — 10+ years building CI/CD and infrastructure automation for Fortune 500 companies. Full summary to be pulled from LinkedIn."
+    role = "I design CI/CD pipelines, Infrastructure as Code, and container platforms at enterprise scale."
+    summary = "Senior DevOps engineer and cloud architect with 10+ years building enterprise infrastructure and automation — and lately, custom AWS Bedrock AI agents. Recent wins: 90% faster deployments, 95% infrastructure cost reduction, and automations saving 40+ hours a week."
     location = "Charlotte, North Carolina"
-    focus = "Currently focused on cloud automation and local AI infrastructure."
+    focus = "Currently at Vanguard; exploring AI/ML integration and local AI infrastructure."
     available = false
     availableLabel = "Open to opportunities"
 
