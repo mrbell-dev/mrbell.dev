@@ -1,0 +1,53 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Pinned to match local dev (hugo v0.164.0 extended).
+env:
+  HUGO_VERSION: 0.164.0
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      # --- resume.mrbell.dev (home = resume) ---
+      - name: Build (resume)
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --gc --minify
+
+      - name: Deploy resume.mrbell.dev
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name mrbell-dev --branch main
+
+      # --- blog.mrbell.dev (same content, home 301s to /blog/) ---
+      - name: Build (blog)
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          rm -rf public
+          hugo --gc --minify --baseURL "https://blog.mrbell.dev/"
+          printf "/  /blog/  301\n" > public/_redirects
+
+      - name: Deploy blog.mrbell.dev
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name blog --branch main
