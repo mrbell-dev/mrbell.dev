@@ -16,7 +16,7 @@ theme = "minimal-black"
 
 [params]
   brand = "Michael Bell"
-  description = "Senior DevOps Engineer — CI/CD, infrastructure automation, and cloud architecture."
+  description = "Team AI SME and platform engineer — internal AI enablement, full-stack delivery, and a decade of DevOps."
 
   # favicon = "icons/favicon.svg"   # TODO: add a favicon to static/
   # logo    = "images/logo.png"     # TODO: optional logo
@@ -43,6 +43,18 @@ theme = "minimal-black"
     blogTitle = "Latest Writing"
     techMarqueeLabel = "Experienced In"
 
+    [[params.home.tech]]
+      label = "React"
+      icon = "devicon-react-original"
+    [[params.home.tech]]
+      label = "Angular"
+      icon = "devicon-angular-plain"
+    [[params.home.tech]]
+      label = "TypeScript"
+      icon = "devicon-typescript-plain"
+    [[params.home.tech]]
+      label = "NestJS"
+      icon = "devicon-nestjs-plain"
     [[params.home.tech]]
       label = "AWS"
       icon = "devicon-amazonwebservices-plain-wordmark"
@@ -83,21 +95,22 @@ theme = "minimal-black"
 
   # Hero Section
   [params.hero]
-    badge = "Senior DevOps Engineer · Cloud Architect"
+    badge = "Team AI SME · Platform Engineer · AI Enablement"
     title = "Hi, I'm Michael Bell."
-    role = "I design CI/CD pipelines, Infrastructure as Code, and container platforms at enterprise scale."
-    summary = "Senior DevOps engineer and cloud architect with 10+ years building enterprise infrastructure and automation — and lately, custom AWS Bedrock AI agents. Recent wins: 90% faster deployments, 95% infrastructure cost reduction, and automations saving 40+ hours a week."
+    role = "I build the internal tooling that makes AI genuinely useful on enterprise code — and ship full-stack features in React, Angular, and NestJS."
+    summary = "Platform engineer and my team's AI SME at Vanguard. I build the internal tooling that makes AI actually useful on an enterprise codebase — context repositories that give Claude real understanding of our infrastructure and applications — with a decade of DevOps and cloud architecture underneath (90% faster deployments, 95% cost reduction, $125K saved via an AI-prompt eval). Next: a Master's in AI at UNC Charlotte."
     location = "Charlotte, North Carolina"
-    focus = "Currently at Vanguard; exploring AI/ML integration and local AI infrastructure."
+    focus = "Team AI SME at Vanguard building internal AI-context tooling; starting a Master's in AI at UNC Charlotte next year."
     available = false
     availableLabel = "Open to opportunities"
 
     nowLabel = "Quick Facts"
     nowIntro = "Right now I'm mainly:"
     now = [
-      "Architecting CI/CD and IaC pipelines",
+      "Building internal AI-context tooling for enterprise code",
+      "Shipping full-stack features (React / Angular / NestJS)",
       "Running a local Ollama/llama.cpp AI stack",
-      "Tinkering with ham radio and 3D printing",
+      "Studying for the Amateur Extra; tinkering with ham gear and 3D printing",
     ]
 
     [params.hero.primary]

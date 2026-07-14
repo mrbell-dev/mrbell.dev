@@ -1,15 +1,16 @@
 +++
 title = "About Me"
-subtitle = "Senior DevOps Engineer · Cloud Architect · Charlotte, NC"
+subtitle = "Team AI SME · Platform Engineer · Charlotte, NC"
 layout = "about"
 +++
 
-Senior DevOps Engineer and Cloud Architect with 10+ years building
-enterprise-scale infrastructure and automation. I design and implement CI/CD
-pipelines (Jenkins, GitHub Actions), Infrastructure as Code (Terraform, Ansible,
-CloudFormation), and container orchestration (Docker, Kubernetes) — and I'm
-currently expanding into AI/ML integration with custom AWS Bedrock agents while
-keeping deep roots in traditional infrastructure.
+Platform engineer and my team's AI SME at Vanguard. My focus right now is making
+AI genuinely useful on an enterprise codebase: I build internal context
+repositories that give Claude real understanding of our infrastructure and
+applications, so it generates code that actually fits how we work — and I ship
+full-stack features in React, Angular, and NestJS alongside it. Underneath all of
+that is a decade of DevOps and cloud architecture, from CI/CD and Infrastructure
+as Code to container platforms and custom AWS Bedrock agents.
 
 A few things I'm proud of:
 
@@ -26,8 +27,10 @@ solving hard technical problems without losing operational excellence.
 
 ### Vanguard — Charlotte, NC
 **Application Engineer III** · Sep 2025 – Present
-Java/Angular services for enterprise consultant tools; cloud-native
-modernization on AWS; CI/CD pipeline ownership and mentoring.
+Full-stack development on the Consultant Hub Platform in React, Angular, and
+NestJS. Serving as my team's **AI SME**: I built internal context repositories
+that give Claude real understanding of Vanguard's infrastructure and codebase, so
+AI-assisted development produces code that fits our systems and standards.
 
 **Senior DevSecOps Engineer** · Jun 2024 – Sep 2025
 Architected AWS solutions (Lambda, ECS, Bedrock, Glue) while sunsetting
@@ -66,10 +69,18 @@ datacenter footprint **60%**, and automated operations with PowerShell/PowerCLI.
 
 ## Certifications
 
-- **Amateur Radio — General Class**, FCC (2025) · callsign W3MRB
+- **Amateur Radio — General Class**, FCC (2025) · callsign W3MRB — currently studying for the Amateur Extra
 - **VCA-DCV**, VMware
 - **Certified Seismic Administrator**, Seismic
 
 ## Education
 
+**M.S. in Artificial Intelligence**, University of North Carolina at Charlotte · starting 2027
 **B.S.**, University of North Carolina at Charlotte
+
+## Beyond Work
+
+Electronics tinkerer and edge-case ham (W3MRB) — I spend more time at the bench
+than the mic. Homebrew RF, 3D-printed field radio gear, SDR, and a self-hosted
+AI stack running on hardware I've unlocked myself. Writing about it at
+[w3mrb.com](https://w3mrb.com).
