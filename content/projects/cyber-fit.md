@@ -7,9 +7,8 @@ github = "https://github.com/mrbell-dev/cyber-fit"
 tags = ["typescript", "pwa", "cloudflare", "vite"]
 categories = ["web"]
 featured = true
+# NOTE: stub — expand later.
 +++
-
-<!-- PLACEHOLDER — expand later. -->
 
 An offline-first habit-tracking PWA with a cyberpunk aesthetic, built with a pure
 TypeScript engine (deterministic, event-sourced) and deployed to Cloudflare
