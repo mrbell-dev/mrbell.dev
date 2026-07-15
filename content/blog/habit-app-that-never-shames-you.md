@@ -78,3 +78,29 @@ an ADHD brain it's the difference between a tool you keep and one you delete.
 
 If any of that resonates, [try it](https://cyberfit.dev) — no signup, nothing to
 lose, and it'll never make you feel bad for missing Tuesday.
+
+## Update — screenshots and a user guide
+
+When I published this, the repo had no screenshots — a privacy-first app has a
+bootstrapping problem: I wasn't going to post my own vitals, and empty-state
+screenshots sell nothing. The fix was to treat screenshots like a build
+artifact. A seed script generates a fully fictional demo profile — three weeks
+of habits, workouts, reading logs, even PHQ-9 results, all invented and
+schema-checked against the real app — and a Playwright pipeline installs it
+through the app's own backup-import path, then walks every screen and captures
+it. `npm run shoot:demo`, nine deterministic PNGs, no human data anywhere.
+
+So here's what the app actually looks like:
+
+![CYBER//FIT Directives screen — daily habits with XP, a 21-day streak, and streak shields](/img/blog/cyber-fit/01-today.png)
+
+And the screen I most wanted people to see — the crash kit. One tap from
+anywhere: paced breathing, grounding, and call/text 988. Nothing in it is
+logged, scored, or tracked, and it works with zero signal:
+
+![CYBER//FIT crash kit — "You're here. Right move."](/img/blog/cyber-fit/09-crash-kit.png)
+
+The same pipeline now feeds a full
+[user guide](https://github.com/mrbell-dev/cyber-fit/blob/main/docs/guide/README.md)
+— every screen, documented with the same fictional profile. When the UI
+changes, I re-run one command and the docs stop lying.
